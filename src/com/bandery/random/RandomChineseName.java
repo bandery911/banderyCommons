@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 /*
@@ -52,11 +51,6 @@ public class RandomChineseName {
             names[i] = randomChineseName();
         }
         return names;
-    }
-
-    public static void main(String[] args) throws Exception{
-        String[] names = randomChineseName(10);
-        System.out.println(Arrays.toString(names));
     }
 
 }

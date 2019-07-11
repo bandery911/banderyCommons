@@ -48,8 +48,4 @@ public class RandomChineseAddress {
         return address;
     }
 
-
-    public static void main(String[] args) throws Exception {
-
-    }
 }
