@@ -14,6 +14,9 @@ public class RandomChineseAddress {
 
     /**
      * 随机生成一个中国地址
+     * 
+     * @return
+     * @throws Exception
      */
     public static String randomChineseAddress() throws Exception {
         BufferedReader provAndCityReader =
@@ -40,6 +43,10 @@ public class RandomChineseAddress {
 
     /**
      * 随机生成一组中国地址
+     * 
+     * @param count
+     * @return
+     * @throws Exception
      */
     public static String[] randomChineseAddress(int count) throws Exception {
         String[] address = new String[count];

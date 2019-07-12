@@ -6,16 +6,19 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Random;
 
-/*
- * 随机生成中文用户名
+/**
+ * 随机生成中文用户名，用户数据库等测试
  */
 public class RandomChineseName {
 
     private static final Random random = new Random(System.currentTimeMillis());
 
-    /*
+    /**
      * 随机生成中国用户名，姓氏只去常见姓氏，过滤冷僻姓
-     * */
+     * 
+     * @return
+     * @throws Exception
+     */
     public static String randomChineseName() throws Exception {
         BufferedReader firstNameReader =
             new BufferedReader(new FileReader(new File("resources/commonChineseFirstName")));
@@ -43,14 +46,18 @@ public class RandomChineseName {
             + chinese.get(random.nextInt(chineseSize));
     }
 
-    /*
-    * 随机生成count个中文姓名
-    * */
+    /**
+     * 随机生成一组中国名
+     * 
+     * @param count
+     *            生成中文名的个数
+     * @return
+     * @throws Exception
+     */
     public static String[] randomChineseName(int count) throws Exception {
         String[] names = new String[count];
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
             names[i] = randomChineseName();
-        }
         return names;
     }
 
